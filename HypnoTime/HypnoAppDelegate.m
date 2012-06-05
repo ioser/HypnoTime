@@ -26,7 +26,13 @@
 	// Create a Time view controller
 	TimeViewController *timeViewController = [[TimeViewController alloc] init];
 	
-	[self.window setRootViewController:timeViewController];
+	// Create a tab controller to keep track of the view controllers
+	NSArray *viewControllers = [NSArray arrayWithObjects:hypnosisViewController, timeViewController, nil];
+	UITabBarController *tabBarController = [[UITabBarController alloc] init];
+	[tabBarController setViewControllers:viewControllers];
+	
+	[self.window setRootViewController:tabBarController];
+//	[self.window setRootViewController:timeViewController];
 //	[self.window setRootViewController:hypnosisViewController];
 	
     self.window.backgroundColor = [UIColor whiteColor];

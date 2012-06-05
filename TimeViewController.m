@@ -2,7 +2,7 @@
 //  TimeViewController.m
 //  HypnoTime
 //
-//  Created by Sara Duckler on 6/4/12.
+//  Created by Richard Millet on 6/4/12.
 //  Copyright (c) 2012 __MyCompanyName__. All rights reserved.
 //
 
@@ -19,6 +19,21 @@
 	[dateFormatter setTimeStyle:NSDateFormatterMediumStyle];
 	
 	[timeLabel setText:[dateFormatter stringFromDate:now]];
+}
+
+//OVERRIDE
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:nil bundle:nil];
+	if (self) {
+		// Get the tab bar item
+		UITabBarItem *tabBarItem = [self tabBarItem];
+		
+		// Give the tab bar item a label string
+		[tabBarItem setTitle:@"Time"];
+	}
+
+	return self;
 }
 
 @end

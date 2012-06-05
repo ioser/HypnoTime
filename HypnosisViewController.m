@@ -22,4 +22,19 @@
 	[self setView:hypnosisView];
 }
 
+//OVERRIDE
+- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
+{
+	self = [super initWithNibName:nil bundle:nil];
+	if (self) {
+		// Get the tab bar item
+		UITabBarItem *tabBarItem = [self tabBarItem];
+		
+		// Give the tab bar item a label string
+		[tabBarItem setTitle:@"Hypnosis"];
+	}
+	
+	return self;
+}
+
 @end
