@@ -32,6 +32,12 @@
 		
 		// Give the tab bar item a label string
 		[tabBarItem setTitle:@"Hypnosis"];
+		
+		// Set the image for the tab bar item
+		UIImage *image = [UIImage imageNamed:@"Hypno.png"];
+		
+		// Put that image on the tab bar item
+		[tabBarItem setImage:image];
 	}
 	
 	return self;

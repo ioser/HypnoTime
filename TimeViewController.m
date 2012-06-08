@@ -31,6 +31,10 @@
 		
 		// Give the tab bar item a label string
 		[tabBarItem setTitle:@"Time"];
+		
+		// Create an image from a file
+		UIImage *tabBarImage = [UIImage imageNamed:@"Time.png"];
+		[tabBarItem setImage:tabBarImage];
 	}
 
 	return self;

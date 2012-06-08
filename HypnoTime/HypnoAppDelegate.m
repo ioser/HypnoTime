@@ -20,14 +20,17 @@
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     // Override point for customization after application launch.
 	
-	// Create a Hypnosis view controller and set it as root
+	// Create a Hypnosis view controller
 	HypnosisViewController *hypnosisViewController = [[HypnosisViewController alloc] init];
+
+	// Create another Hypnosis view controller
+	HypnosisViewController *hvc2 = [[HypnosisViewController alloc] init];
 	
 	// Create a Time view controller
 	TimeViewController *timeViewController = [[TimeViewController alloc] init];
 	
 	// Create a tab controller to keep track of the view controllers
-	NSArray *viewControllers = [NSArray arrayWithObjects:hypnosisViewController, timeViewController, nil];
+	NSArray *viewControllers = [NSArray arrayWithObjects:hypnosisViewController, timeViewController, hvc2, nil];
 	UITabBarController *tabBarController = [[UITabBarController alloc] init];
 	[tabBarController setViewControllers:viewControllers];
 	
