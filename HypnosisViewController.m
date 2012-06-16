@@ -23,6 +23,13 @@
 }
 
 //OVERRIDE
+- (void)viewDidLoad
+{
+	[super viewDidLoad];
+	NSLog(@"viewDidLoad method of HypnosisViewController class called.");
+}
+
+//OVERRIDE
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
 	self = [super initWithNibName:nil bundle:nil];
@@ -38,6 +45,9 @@
 		
 		// Put that image on the tab bar item
 		[tabBarItem setImage:image];
+		
+		// Set the view's background color
+		[[self view] setBackgroundColor:[UIColor yellowColor]];
 	}
 	
 	return self;
